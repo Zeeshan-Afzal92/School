@@ -1,0 +1,23 @@
+* Hostname was found in DNS cache
+* Hostname in DNS cache was stale, zapped
+*   Trying ::1...
+* Connected to localhost (::1) port 80 (#10)
+> POST /School/api/ HTTP/1.1
+Host: localhost
+Accept: */*
+Cookie: PHPSESSID=nvnf9i3iv0iog5beb60o3q60n6
+Content-Length: 214
+Expect: 100-continue
+Content-Type: multipart/form-data; boundary=------------------------18d33b32e71a345d
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 500 Internal Server Error
+< Date: Tue, 11 Aug 2015 22:14:57 GMT
+* Server Apache/2.4.12 (Unix) PHP/5.3.29 mod_wsgi/3.5 Python/2.7.9 OpenSSL/1.0.1j is not blacklisted
+< Server: Apache/2.4.12 (Unix) PHP/5.3.29 mod_wsgi/3.5 Python/2.7.9 OpenSSL/1.0.1j
+< X-Powered-By: PHP/5.3.29
+< Content-Length: 93
+< Content-Type: application/json
+* HTTP error before end of send, stop sending
+< 
+* Closing connection 10
