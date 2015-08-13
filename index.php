@@ -1,3 +1,3 @@
 <?php
-header("Location: FrontEnd/FrontEndTest.php");
+header("Location: FrontEnd/php/login.php");
 ?>

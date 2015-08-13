@@ -1,7 +1,7 @@
 <?php
-Include("connection.php");
-Include("functions.php");
-//Include("session.php");
+//Include("connection.php");
+//Include("functions.php");
+Include("session.php");
 header("Content-Type: application/json");
 //JUST FOR GET REQUEST WITH JSON FORMATTED DATA
 //$a = $_GET['id'];
@@ -20,12 +20,13 @@ $abc = $_POST['posted'];
 // $arg = array('order' => $order, 'type' => $type, 'data' => $data );
 
 // $send = json_encode($arg);
-//session_start();
+session_start();
 working($abc);
 
 function working($dd)
 {
-
+	//echo "stringstringstringstringstringstringstringstring";
+//var_dump($dd);
 	$total = json_decode($dd, 1);
 	if ($total['order'] == 'Insert') {
 		if ($total['type'] == 'TEACHER') {//////////
@@ -216,7 +217,8 @@ function working($dd)
 		}
 	 }elseif ($total ['order'] == 'login'){
 		$recivedArray = $total ['data'];
-		login($recivedArray['userId'],$recivedArray['password']);
+		//echo "stringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstring";
+		login($recivedArray['username'],$recivedArray['password']);
 	}else if ($total ['order'] == 'logout'){
 		//echo "Logout";
 		logout1();
